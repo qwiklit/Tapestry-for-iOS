@@ -25,6 +25,7 @@
  private let rssEnclosureTag = "enclosure"
  private let rssGuidTag = "guid"
  private let rssIdTag = "id"
+ private let rssSummaryTag = "summary"
  
  
  private let atomItemTag = "entry"
@@ -39,6 +40,7 @@
  private let atomPubDateTag = "published"
  private let atomContentTag = "content"
  private let atomWebsiteTag = "id"
+ private let atomDescriptionTag = "summary"
  
  // MARK: - Feed Types Enumeration
  
@@ -89,6 +91,7 @@
     
     private var commentsCount = ""
     private var publicationDate = ""
+    
     
     override init() {
     }
@@ -455,6 +458,8 @@
                 currentFeed?.rawDescription! += currentString
             case atomWebsiteTag:
                 currentFeed?.id! += currentString
+ //           case atomDescriptionTag:
+//                currentFeed?.summary! += currentString
             default:
                 break;
             }

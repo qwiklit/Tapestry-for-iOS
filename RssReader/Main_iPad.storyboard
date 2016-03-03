@@ -57,7 +57,7 @@
         <!--Detail-->
         <scene sceneID="XJm-sA-H6W">
             <objects>
-                <viewController title="Detail" id="FDe-9Q-tKG" customClass="DetailArticleViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="FDe-9Q-tKG" customClass="DetailArticleViewController" customModule="TapestryProjectSalvo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b4S-q5-3r8"/>
                         <viewControllerLayoutGuide type="bottom" id="2ni-1S-vW2"/>
@@ -109,7 +109,7 @@
         <!--Side Menu View Controller-->
         <scene sceneID="OdJ-Q9-nLM">
             <objects>
-                <tableViewController id="5KB-tk-tCr" customClass="SideMenuViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5KB-tk-tCr" customClass="SideMenuViewController" customModule="TapestryProjectSalvo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="S9A-B5-MIO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,13 +168,13 @@
         <!--Feeds View Controller-->
         <scene sceneID="RcQ-rN-a9l">
             <objects>
-                <tableViewController id="05E-b6-3Ah" customClass="FeedsViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="05E-b6-3Ah" customClass="FeedsViewController" customModule="TapestryProjectSalvo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="582" sectionHeaderHeight="1" sectionFooterHeight="22" id="0l5-M3-YU8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="SFFeedViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="ArticleViewCell" rowHeight="582" id="FTn-AC-o39" customClass="ArticleViewCell" customModule="RssReader" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="SFFeedViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="ArticleViewCell" rowHeight="582" id="FTn-AC-o39" customClass="ArticleViewCell" customModule="TapestryProjectSalvo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="65" width="600" height="582"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FTn-AC-o39" id="ax6-5p-xB2">
@@ -291,7 +291,6 @@
                                     <outlet property="commentsCountLabel" destination="stn-eB-Ikw" id="JAu-zQ-0r4"/>
                                     <outlet property="commentsLabel" destination="Bfr-Gz-3it" id="6uf-Nv-zWM"/>
                                     <outlet property="dateTimeLabel" destination="Imx-Dw-VnO" id="iul-3B-G10"/>
-                                    <outlet property="descriptionLabel" destination="ja0-rU-Q9c" id="Hrb-5T-3jw"/>
                                     <outlet property="headerImageView" destination="4ji-rn-mKE" id="N7v-RM-YvH"/>
                                     <outlet property="imageViewConstraintHeight" destination="ujo-mY-lFe" id="4Tx-6O-40D"/>
                                     <outlet property="titleLabel" destination="nze-OE-LHB" id="59S-3i-bif"/>
@@ -338,7 +337,7 @@
         <!--Settings-->
         <scene sceneID="RRv-lC-m9J">
             <objects>
-                <tableViewController id="San-sF-v61" customClass="SettingViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="San-sF-v61" customClass="SettingViewController" customModule="TapestryProjectSalvo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="loy-Gp-fnt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

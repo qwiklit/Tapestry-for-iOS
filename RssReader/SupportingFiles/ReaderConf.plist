@@ -22,7 +22,7 @@
 			<key>name</key>
 			<string>Tapestry Home</string>
 			<key>url</key>
-			<string>http://mix.chimpfeedr.com/e58b7-TapestryMainFeed-11February</string>
+			<string>http://mix.chimpfeedr.com/71519-TapestryMainFeed-24February</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -292,14 +292,6 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>Necessary Fiction</string>
-				<key>url</key>
-				<string>http://www.necessaryfiction.com/atom</string>
-				<key>submit</key>
-				<string>https://necessaryfiction.submittable.com/submit</string>
-			</dict>
-			<dict>
-				<key>name</key>
 				<string>The New Yorker</string>
 				<key>url</key>
 				<string>http://www.newyorker.com/services/rss/feeds/fiction.xml</string>
@@ -496,15 +488,15 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>The Barking</string>
-				<key>url</key>
-				<string>http://thebarking.com/feed/</string>
-			</dict>
-			<dict>
-				<key>name</key>
 				<string>The Awl</string>
 				<key>url</key>
 				<string>http://feeds2.feedburner.com/TheAwl</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>The Barking</string>
+				<key>url</key>
+				<string>http://thebarking.com/feed/</string>
 			</dict>
 			<dict>
 				<key>name</key>

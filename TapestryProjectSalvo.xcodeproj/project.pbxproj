@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		529C23F5E78CFFB0EE27F533 /* FeedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C25CF9189D4D59280A0B5 /* FeedsService.swift */; };
 		C25AC3EA4D734E4491A46FC9 /* libPods-RssReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A86EFB9989445B9BE59D6AA /* libPods-RssReader.a */; };
+		EB108C9D1C7E80A500A9F898 /* PetitLatin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB108C9C1C7E80A500A9F898 /* PetitLatin.ttf */; };
+		EB108C9F1C7E815F00A9F898 /* Lecker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB108C9E1C7E815F00A9F898 /* Lecker.ttf */; };
+		EB996A451C824AC1004F294B /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB996A441C824AC1004F294B /* ShareButton.swift */; };
 		EBA28FCB1C75711C00722BF0 /* AUGUSTUS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EBA28FCA1C75711C00722BF0 /* AUGUSTUS.TTF */; };
 		EBA28FCD1C7578C500722BF0 /* cicle in Resources */ = {isa = PBXBuildFile; fileRef = EBA28FCC1C7578C500722BF0 /* cicle */; };
 		EBE17E941C66F826002B22D9 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE17E931C66F826002B22D9 /* DiscoverView.swift */; };
@@ -85,6 +88,9 @@
 		3A86EFB9989445B9BE59D6AA /* libPods-RssReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		529C25CF9189D4D59280A0B5 /* FeedsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsService.swift; sourceTree = "<group>"; };
 		96BF58AB28FFAC8B75FF5A25 /* Pods-RssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.release.xcconfig"; sourceTree = "<group>"; };
+		EB108C9C1C7E80A500A9F898 /* PetitLatin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PetitLatin.ttf; path = ../../Fonts/cicle/PetitLatin.ttf; sourceTree = "<group>"; };
+		EB108C9E1C7E815F00A9F898 /* Lecker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lecker.ttf; path = ../../Fonts/Lecker.ttf; sourceTree = "<group>"; };
+		EB996A441C824AC1004F294B /* ShareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareButton.swift; path = ../../../ShareButton.swift; sourceTree = "<group>"; };
 		EBA28FCA1C75711C00722BF0 /* AUGUSTUS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AUGUSTUS.TTF; sourceTree = "<group>"; };
 		EBA28FCC1C7578C500722BF0 /* cicle */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cicle; path = ../../Fonts/cicle; sourceTree = "<group>"; };
 		EBE17E931C66F826002B22D9 /* DiscoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverView.swift; path = "../../../../../Coding/TapestryApp/TapestryFirstDraft/Third Iteration/RssReader/Classes/ViewControllers/DiscoverView.swift"; sourceTree = "<group>"; };
@@ -223,6 +229,8 @@
 				47D1F921A6AE4D578EED808E /* Frameworks */,
 				EBA28FCC1C7578C500722BF0 /* cicle */,
 				EBA28FCA1C75711C00722BF0 /* AUGUSTUS.TTF */,
+				EB108C9C1C7E80A500A9F898 /* PetitLatin.ttf */,
+				EB108C9E1C7E815F00A9F898 /* Lecker.ttf */,
 				0CAFF1CB942C30AED2A90F3E /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 			children = (
 				EBE17E931C66F826002B22D9 /* DiscoverView.swift */,
 				F253774E1A1E444A008B1171 /* FeedsViewController.swift */,
+				EB996A441C824AC1004F294B /* ShareButton.swift */,
 				F26505BF1A2331D200A066A5 /* SideMenuViewController.swift */,
 			);
 			name = "Storyboard 1+2";
@@ -578,11 +587,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4839C701A397F6E00B1F439 /* Raleway-Light.ttf in Resources */,
+				EB108C9D1C7E80A500A9F898 /* PetitLatin.ttf in Resources */,
 				F25377241A1E149D008B1171 /* Main_iPhone.storyboard in Resources */,
 				F4829C381BE312A6007570D0 /* SidebarSectionHeaderView.xib in Resources */,
 				F25377291A1E149D008B1171 /* LaunchScreen.xib in Resources */,
 				F4839C791A39956600B1F439 /* Lato-Light.ttf in Resources */,
 				F4B820771A301F2900A1E002 /* OFL.txt in Resources */,
+				EB108C9F1C7E815F00A9F898 /* Lecker.ttf in Resources */,
 				F4E173D01AF5CE2100E9B99E /* Main_iPhone-2.storyboard in Resources */,
 				F4B820761A301F2900A1E002 /* Coustard-Regular.ttf in Resources */,
 				F4839C6E1A397F6900B1F439 /* Raleway-Regular.ttf in Resources */,
@@ -675,6 +686,7 @@
 				F4E173DA1AF89FB800E9B99E /* SafariActivity.swift in Sources */,
 				F43DFE391B20406A008C7792 /* MenuViewController.swift in Sources */,
 				F43DFE371B203719008C7792 /* ArticleListNavHeaderView.swift in Sources */,
+				EB996A451C824AC1004F294B /* ShareButton.swift in Sources */,
 				F43DFE431B217EFA008C7792 /* ArticleMetaViewCell.swift in Sources */,
 				F4829C361BE210FE007570D0 /* SectionHeaderView.swift in Sources */,
 				F293593E1A25343B00BD0058 /* ArticleDataSource.swift in Sources */,

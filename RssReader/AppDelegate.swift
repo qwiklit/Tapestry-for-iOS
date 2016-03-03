@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+        NSThread.sleepForTimeInterval(3.5);
+
         if let infoDict = NSBundle.mainBundle().infoDictionary {
             let storyboardName:String = infoDict["UIMainStoryboardFile"] as! String
             

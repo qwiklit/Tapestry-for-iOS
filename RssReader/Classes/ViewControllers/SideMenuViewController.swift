@@ -15,6 +15,7 @@ class SideMenuViewController: UITableViewController, SectionHeaderViewDelegate {
     var currentFeed : (title: String, url: String)?
     var oldFeed: (title: String, url: String)?
     
+    
     lazy var detailViewController: FeedsViewController = {
         var navigationFrontVC: UINavigationController?
         if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone {
@@ -222,6 +223,13 @@ class SideMenuViewController: UITableViewController, SectionHeaderViewDelegate {
         let feed = feedsURLs[sectionHeaderView.sectionID]
         didSelectMenuItem(feed)
         
+        
+    }
+    
+
+    
+    
     }
 
-}
+
+

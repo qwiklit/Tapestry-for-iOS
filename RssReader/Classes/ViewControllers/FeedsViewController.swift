@@ -8,13 +8,15 @@
 
 import UIKit
 
-
 class FeedsViewController: UITableViewController {
     @IBOutlet var navigationHeaderButton: UIButton!
-    var navigationHeaderLabel:UILabel?
     
+   
+    var navigationHeaderLabel:UILabel?
     private var _currentFeeds: (title: String, url: String)?
     private let slideUpTransitionAnimator = SlideUpTransitionAnimator()
+    var urlbutton: UIButton?
+   
     
     var currentFeeds: (title: String, url: String)? {
         set (newValue){
@@ -26,12 +28,9 @@ class FeedsViewController: UITableViewController {
         }
     }
     
-    
-
-    
     // Data source for UITableView
     lazy var dataSource: ArticleDataSource? = {
-        return ArticleDataSource(configureCellClosure: { (articleCell, article, indexPath) -> () in
+        return ArticleDataSource(configureCellClosure: { (var articleCell, article, indexPath) -> () in
            
             // Display article title
            articleCell.titleLabel.text = article.title
@@ -40,31 +39,24 @@ class FeedsViewController: UITableViewController {
             // display atom id for front page
             
         articleCell.idLabel.text = article.id
-        
+            
+            
+               //Change the ID of web URL to something presentable and legible
+            
 
-            
-          
-    
-            
-    //Change the ID of web URL to something presentable and legible
-            
-  //      if articleCell.titleLabel.text!.lowercaseString.rangeOfString(" by ") != nil {
-  //          articleCell.authorLabel.textColor = UIColor(red: 99.0/255.0, green: 181.0/255.0, blue: 206.0/255.0, alpha: 0)
-  //          articleCell.titleLabel.font = UIFont(name: label.font.fontName, size: 20)
-  //          }
-            
-            
           if articleCell.idLabel.text!.lowercaseString.rangeOfString("electricliterature") != nil {
-                articleCell.idLabel.text = "Electric Literature"
-      //      articleCell.idLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
-      //      articleCell.titleLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
-      //      articleCell.authorLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
-            
+            articleCell.idLabel.text = "Electric Literature"
+            articleCell.idLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
+            articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+        
             }
+           
+            
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("anthill") != nil {
                 articleCell.idLabel.text = "The Anthill"
-        //        articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
+        //        articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
+        //        articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
         //        articleCell.titleLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
         //        articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
             }
@@ -72,6 +64,7 @@ class FeedsViewController: UITableViewController {
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("quaint") != nil {
                 articleCell.idLabel.text = "Quaint Magazine"
         //        articleCell.idLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
+         //       articleCell.authorLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
         //         articleCell.titleLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
          //        articleCell.authorLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
                
@@ -80,10 +73,35 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("atticus") != nil {
                 articleCell.idLabel.text = "Atticus Review"
-       //          articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+        //         articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+        //         articleCell.authorLabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
         //         articleCell.titleLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
         //         articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
             }
+            
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("brainpickings") != nil {
+                articleCell.idLabel.text = "Brain Pickings"
+                //      articleCell.authorLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
+                       articleCell.idLabel.backgroundColor = UIColor(red: 247.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                
+                //      articleCell.authorLabel.textColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
+                //      articleCell.titleLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
+                //      articleCell.authorLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
+                
+            }
+            
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("brainpickings") != nil {
+                articleCell.idLabel.text = "Brain Pickings"
+                //      articleCell.authorLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                
+              
+                
+            }
+
+
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("deadmule") != nil {
                 articleCell.idLabel.text = "Dead Mule"
@@ -115,10 +133,10 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("mcsweeney") != nil {
                 articleCell.idLabel.text = "McSweeneys"
-         //       articleCell.idLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-        //           articleCell.titleLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-         //          articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-                
+          //      articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+         //        articleCell.authorLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+                   articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                   articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
                 
             }
             
@@ -139,19 +157,25 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("bisonjack") != nil {
                 articleCell.idLabel.text = "The Journal of Bison Jack"
-        //        articleCell.idLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
-        //        articleCell.titleLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
+                articleCell.authorLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+         //       articleCell.titleLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
          //       articleCell.authorLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
                 
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("queenmobs") != nil {
                 articleCell.idLabel.text = "Queen Mob's"
+                articleCell.idLabel.backgroundColor = UIColor(red: 22.0/255.0, green: 160.0/255.0, blue: 133.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("3am") != nil {
                 articleCell.idLabel.text = "3am Magazine"
-       //         articleCell.idLabel.backgroundColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
+        //        articleCell.authorLabel.backgroundColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
+        //        articleCell.authorLabel.textColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
+                
        //         articleCell.titleLabel.backgroundColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
        //         articleCell.authorLabel.backgroundColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
                 
@@ -194,7 +218,9 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("theawl") != nil {
                 articleCell.idLabel.text = "The Awl"
-      //          articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+      //          articleCell.authorLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                 articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 63.0/255.0, green: 195.0/255.0, blue: 128.0/255.0, alpha: 0.98)
        //         articleCell.titleLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
        //         articleCell.authorLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
                
@@ -202,9 +228,10 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("harpers") != nil {
                 articleCell.idLabel.text = "Harper's"
-       //            articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
-       //             articleCell.titleLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
-       //              articleCell.authorLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+       //            articleCell.authorLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+       //           articleCell.authorLabel.textColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+                    articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                     articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
                 
             }
             
@@ -215,15 +242,18 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("theparisreview") != nil {
                 articleCell.idLabel.text = "The Paris Review"
-       //         articleCell.idLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
+       //         articleCell.authorLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
        //         articleCell.titleLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
        //         articleCell.authorLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("newyorker") != nil {
                 articleCell.idLabel.text = "The New Yorker"
-         //            articleCell.idLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-         //            articleCell.titleLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+         //       articleCell.authorLabel.backgroundColor = UIColor(red: 236.0/255.0, green: 236.0/255.0, blue: 236.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+          //      articleCell.authorLabel.textColor = UIColor(red: 236.0/255.0, green: 236.0/255.0, blue: 236.0/255.0, alpha: 0.98)
          //            articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
          //          articleCell.headerImageView.image = UIImage (named: "NewYorker")
                 
@@ -239,6 +269,8 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("tor.com") != nil {
                 articleCell.idLabel.text = "Tor Magazine"
+                articleCell.idLabel.backgroundColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("escapepod") != nil {
@@ -249,9 +281,20 @@ class FeedsViewController: UITableViewController {
                 articleCell.idLabel.text = "Lightspeed Magazine"
             }
             
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("guts") != nil {
+                articleCell.idLabel.text = "GUTS Magazine"
+            }
+            
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("believermag") != nil {
+                articleCell.idLabel.text = "Believer Mag"
+                     articleCell.idLabel.backgroundColor = UIColor(red: 150.0/255.0, green: 140.0/255.0, blue: 27.0/255.0, alpha: 0.98)
+                    articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+            }
+            
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("apex-mag") != nil {
                 articleCell.idLabel.text = "Apex Magazine"
-          //      articleCell.idLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
+         //      articleCell.authorLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
+          //      articleCell.authorLabel.textColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
           //      articleCell.authorLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
           //      articleCell.titleLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
                 
@@ -260,7 +303,8 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("shortfictionbreak") != nil {
               articleCell.idLabel.text = "Short Fiction Break"
-        //           articleCell.idLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+         //     articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+         //     articleCell.authorLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
          //     articleCell.titleLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
          //       articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
             }
@@ -271,7 +315,9 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("nereview") != nil {
                 articleCell.idLabel.text = "Northeast Review"
-        //         articleCell.idLabel.backgroundColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
+                 articleCell.idLabel.backgroundColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
+        //        articleCell.authorLabel.textColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
         //        articleCell.titleLabel.backgroundColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
         //        articleCell.authorLabel.backgroundColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
                 
@@ -280,7 +326,8 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("writersalmanac") != nil {
                 articleCell.idLabel.text = "Writer's Almanac"
-        //        articleCell.idLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
+        //        articleCell.authorLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
+        //        articleCell.authorLabel.textColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
         //         articleCell.titleLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
         //         articleCell.authorLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
             }
@@ -312,6 +359,9 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("americanscholar") != nil {
                 articleCell.idLabel.text = "The American Scholar"
+          //      articleCell.authorLabel.backgroundColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+          //      articleCell.authorLabel.textColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("chelseastation") != nil {
@@ -322,8 +372,11 @@ class FeedsViewController: UITableViewController {
                 articleCell.idLabel.text = "PEN"
             }
             
-            if articleCell.idLabel.text!.lowercaseString.rangeOfString("krblog") != nil {
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("kenyonreview") != nil {
                 articleCell.idLabel.text = "The Kenyon Review"
+                articleCell.idLabel.backgroundColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("narrativemag") != nil {
@@ -352,6 +405,10 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("omnivoracious") != nil {
                 articleCell.idLabel.text = "Omnivoracious"
+
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                 articleCell.authorLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("themillions") != nil {
@@ -364,7 +421,8 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("lithub") != nil {
                 articleCell.idLabel.text = "Lithub"
-        //         articleCell.idLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 239.0/255.0, blue: 216.0/255.0, alpha: 0.98)
+                 articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 239.0/255.0, blue: 216.0/255.0, alpha: 0.98)
         //        articleCell.titleLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 239.0/255.0, blue: 216.0/255.0, alpha: 0.98)
         //        articleCell.authorLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 239.0/255.0, blue: 216.0/255.0, alpha: 0.98)
                // articleCell.headerImageView.image = UIImage (named: "" )
@@ -386,6 +444,10 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("globeandmail") != nil {
                 articleCell.idLabel.text = "Globe and Mail Books"
+                articleCell.idLabel.backgroundColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+       //          articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+        //        articleCell.authorLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
             }
                         
             
@@ -394,7 +456,12 @@ class FeedsViewController: UITableViewController {
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("theguardian") != nil {
+                
                 articleCell.idLabel.text = "The Guardian Books"
+          //      articleCell.authorLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 185.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 185.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("flavorwire") != nil {
@@ -403,14 +470,20 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("nytimes") != nil {
                 articleCell.idLabel.text = "New York Times"
+                  articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                 articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
             }
             
-            if articleCell.idLabel.text!.lowercaseString.rangeOfString("wwborders") != nil {
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("tag:,2016") != nil {
                 articleCell.idLabel.text = "Words Without Borders"
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("medium.com") != nil {
                 articleCell.idLabel.text = "Made Up Words"
+            }
+            
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("typepad") != nil {
+                articleCell.idLabel.text = "Times Literary Supplement"
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("wordhaus") != nil {
@@ -668,6 +741,8 @@ class FeedsViewController: UITableViewController {
                         
                     }
                     
+                  
+                    
                     
    //                 if articleCell.imageViewConstraintWidth != nil {
        //                 do {
@@ -760,9 +835,6 @@ class FeedsViewController: UITableViewController {
         // Get the first feed in the list
         currentFeeds = (title: feedsURLs[0]["name"]!, url: feedsURLs[0]["url"]!)
         
-        
-        
-       
         
         // Configure title label/dropdown menu depending on your settings
         if ConfigurationManager.isDropdownMenuEnabled() {
@@ -959,12 +1031,25 @@ class FeedsViewController: UITableViewController {
         }
     }
     
+
+    @IBAction func ShareButton(sender: AnyObject) {
+        
+        
+        let textToShare = "[Via Tapestry on iOS]"
+        
+        if let myWebsite = NSURL(string: "http://www.codingexplorer.com/") {
+            let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
+
+
     @IBAction func unwindToFeedScreen(segue: UIStoryboardSegue) {
         if UIApplication.sharedApplication().statusBarHidden {
             UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Slide)
         }
     }
-   
-    
+
 
 }
