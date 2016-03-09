@@ -41,6 +41,8 @@ class Article {
     var guid: String? = ""
     var publicationTitle: String? = ""
     var id: String? = ""
+    var summary: String? = ""
+ 
     
     
     init() {

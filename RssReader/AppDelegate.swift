@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if storyboardName == "Main_iPhone" || storyboardName == "Main_iPhone-2" || storyboardName == "Main_iPad" {
                 if ConfigurationManager.defaultTheme() == "dark" {
                    UINavigationBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-                   UINavigationBar.appearance().tintColor = UIColor(red: 81/255, green: 194/255, blue: 255/255, alpha: 1.0)
+                   UINavigationBar.appearance().tintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+                  
                     
                     
         // Change status bar style
@@ -46,14 +47,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // Change status bar style
                     UIApplication.sharedApplication().statusBarStyle = .Default
                     
-                    if let barFont = UIFont(name: ConfigurationManager.defaultBarFont(), size: 17.0) {
+                    if let barFont = UIFont(name: ConfigurationManager.defaultBarFont(), size: 18.0) {
                         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 166.0/255.0, green: 37.0/255.0, blue: 15.0/255.0, alpha: 1.0), NSFontAttributeName:barFont]
                     }
                     
                 }
                 
                 // Configure the default fonts
-                UILabel.appearance().font = ConfigurationManager.defaultCellFont() != "default" ? UIFont(name: "Varela-Regular", size: 12.5) : UIFont(name: ConfigurationManager.defaultCellFont(), size: 12.5)
+                UILabel.appearance().font = ConfigurationManager.defaultCellFont() != "default" ? UIFont(name: "Lato-Regular", size: 16.5) : UIFont(name: ConfigurationManager.defaultCellFont(), size: 14.5)
+                
             }
         }
         

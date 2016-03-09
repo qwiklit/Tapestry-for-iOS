@@ -39,30 +39,44 @@ class FeedsViewController: UITableViewController {
             // display atom id for front page
             
         articleCell.idLabel.text = article.id
+        articleCell.descriptionLabel.textAlignment = NSTextAlignment.Justified
             
+       //    articleCell.fpdescriptionlabel.text = "Click here to read the rest of the story"
             
-               //Change the ID of web URL to something presentable and legible
+            //article.rawDescription?.stringByReplacingOccurrencesOfString("\n", withString: "").stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
             
 
-          if articleCell.idLabel.text!.lowercaseString.rangeOfString("electricliterature") != nil {
+            
+           
+          
+
+            
+            
+            
+                         //Change the ID of web URL to something presentable and legible
+            
+            
+
+        if  articleCell.idLabel.text!.lowercaseString.rangeOfString("electricliterature") != nil {
             articleCell.idLabel.text = "Electric Literature"
             articleCell.idLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
             articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
-        
+            articleCell.fpdescriptionlabel.text = "Read this story and more on Electric Literature →"
+       
             }
            
             
             
-            if articleCell.idLabel.text!.lowercaseString.rangeOfString("anthill") != nil {
+            if  articleCell.idLabel.text!.lowercaseString.rangeOfString("anthill") != nil {
                 articleCell.idLabel.text = "The Anthill"
-        //        articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
-        //        articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
-        //        articleCell.titleLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
-        //        articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Anthill →"
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("quaint") != nil {
                 articleCell.idLabel.text = "Quaint Magazine"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Quaint Magazine →"
+
         //        articleCell.idLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
          //       articleCell.authorLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
         //         articleCell.titleLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
@@ -73,236 +87,364 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("atticus") != nil {
                 articleCell.idLabel.text = "Atticus Review"
-        //         articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
-        //         articleCell.authorLabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Atticus Review →"
+                
+
+                 articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                 articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
         //         articleCell.titleLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
         //         articleCell.authorLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("brainpickings") != nil {
                 articleCell.idLabel.text = "Brain Pickings"
-                //      articleCell.authorLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
-                       articleCell.idLabel.backgroundColor = UIColor(red: 247.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 247.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
                 articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
-                
-                //      articleCell.authorLabel.textColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
-                //      articleCell.titleLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
-                //      articleCell.authorLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Brain Pickings →"
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 247.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
                 
             }
-            
-            if articleCell.idLabel.text!.lowercaseString.rangeOfString("brainpickings") != nil {
-                articleCell.idLabel.text = "Brain Pickings"
-                //      articleCell.authorLabel.backgroundColor = UIColor(red: 192.0/255.0, green: 57.0/255.0, blue: 43.0/255.0, alpha: 0.98)
-                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
-                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
-                
-              
-                
-            }
-
 
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("deadmule") != nil {
                 articleCell.idLabel.text = "Dead Mule"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Dead Mule →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("eighteen") != nil {
                 articleCell.idLabel.text = "EighteenBridges"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Eighteen Bridges →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 244.0/255.0, green: 179.0/255.0, blue: 80.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 244.0/255.0, green: 179.0/255.0, blue: 80.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("geist") != nil {
                 articleCell.idLabel.text = "Geist"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Geist →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("hazlitt") != nil {
                 articleCell.idLabel.text = "Hazlitt"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Hazlitt →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 25.0/255.0, alpha: 0.98)
+                 articleCell.fpdescriptionlabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("purplepassion") != nil {
-                articleCell.idLabel.text = "Purple Passion Press"
+                articleCell.idLabel.text = "Purple Passion Press →"
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("offing") != nil {
                 articleCell.idLabel.text = "The Offing Mag"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on The Offing Mag →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                 articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("poeticentanglement") != nil {
                 articleCell.idLabel.text = "Poetic Entaglement"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Poetic Entanglement →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 70.0/255.0, green: 122.0/255.0, blue: 70.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 70.0/255.0, green: 122.0/255.0, blue: 70.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("mcsweeney") != nil {
                 articleCell.idLabel.text = "McSweeneys"
-          //      articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-         //        articleCell.authorLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-                   articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
-                   articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
-                
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on McSweeneys →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("feathertale") != nil {
                 articleCell.idLabel.text = "Feathertale"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Feathertale →"
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
             }
             
     
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("necessaryfiction") != nil {
                 articleCell.idLabel.text = "Necessary Fiction"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Necessary Fiction →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                
                 
                 
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("masters") != nil {
                 articleCell.idLabel.text = "Master's Review"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on The Master's Review →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 3.0/255.0, green: 201.0/255.0, blue: 169.0/255.0, alpha: 0.98)
+                articleCell.authorLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 3.0/255.0, green: 201.0/255.0, blue: 169.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("bisonjack") != nil {
                 articleCell.idLabel.text = "The Journal of Bison Jack"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on The Journal of Bison Jack →"
                 articleCell.idLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
                 articleCell.authorLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
-         //       articleCell.titleLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
-         //       articleCell.authorLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
+                 articleCell.fpdescriptionlabel.textColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
+           //     articleCell.titleLabel.shadowColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
                 
             }
             
-            if articleCell.idLabel.text!.lowercaseString.rangeOfString("queenmobs") != nil {
-                articleCell.idLabel.text = "Queen Mob's"
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("bisonjack") != nil {
+                articleCell.idLabel.text = "The Journal of Bison Jack"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Journal of Bison Jack →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
+                articleCell.authorLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
+                //     articleCell.titleLabel.shadowColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 0.98)
+                
+            }
+            
+
+            
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("chicago") != nil {
+                articleCell.idLabel.text = "Chicago Literati"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Chicago Literati →"
                 articleCell.idLabel.backgroundColor = UIColor(red: 22.0/255.0, green: 160.0/255.0, blue: 133.0/255.0, alpha: 0.98)
                 articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
                 
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("3am") != nil {
                 articleCell.idLabel.text = "3am Magazine"
-        //        articleCell.authorLabel.backgroundColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
-        //        articleCell.authorLabel.textColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
-                
-       //         articleCell.titleLabel.backgroundColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
-       //         articleCell.authorLabel.backgroundColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
-                
-                
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on 3am Magazine →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/183.0, blue: 255.0/255.0, alpha: 0.98)
+                 articleCell.fpdescriptionlabel.textColor = UIColor(red: 171.0/255.0, green: 181.0/183.0, blue: 63.0/255.0, alpha: 0.98)
+   
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("buenosaires") != nil {
                 articleCell.idLabel.text = "The Buenos Aires Review"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on The Buenos Aires Review →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 253.0/255.0, green: 223.0/183.0, blue: 167.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/183.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 253.0/255.0, green: 223.0/183.0, blue: 167.0/255.0, alpha: 0.98)
             }
-            
-            if articleCell.idLabel.text!.lowercaseString.rangeOfString("geist") != nil {
-                articleCell.idLabel.text = "Geist"
-            }
+         
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("augury") != nil {
                 articleCell.idLabel.text = "Augury Books"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Augury Books →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 30.0/255.0, green: 130.0/183.0, blue: 76.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/183.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 30.0/255.0, green: 130.0/183.0, blue: 76.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("carvezine") != nil {
                 articleCell.idLabel.text = "Carve Magazine"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Carve Magazine →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/183.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/183.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/183.0, blue: 255.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("americanshortfiction") != nil {
                 articleCell.idLabel.text = "American Short Fiction"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on American Short Fiction →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 46.0/255.0, green: 204.0/183.0, blue: 113.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/183.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 46.0/255.0, green: 204.0/183.0, blue: 113.0/255.0, alpha: 0.98)
+                
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("publicbooks") != nil {
                 articleCell.idLabel.text = "Public Books"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Public Books →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 46.0/255.0, green: 204.0/183.0, blue: 113.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/183.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 46.0/255.0, green: 204.0/183.0, blue: 113.0/255.0, alpha: 0.98)
+            }
+            
+            
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("pithead") != nil {
+                articleCell.idLabel.text = "Pithead Chapel"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Pithead Chapel →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/191.0, blue: 113.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/183.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/191.0, blue: 113.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("pshares") != nil {
                 articleCell.idLabel.text = "Ploughshares"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Ploughshares →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 63.0/255.0, green: 195.0/255.0, blue: 128.0/255.0, alpha: 0.98)
+                
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+           
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("thewalrus") != nil {
                 articleCell.idLabel.text = "The Walrus"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on The Walrus →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/183.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
             }
             
             
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("theawl") != nil {
                 articleCell.idLabel.text = "The Awl"
-      //          articleCell.authorLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
-                 articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
-                articleCell.idLabel.textColor = UIColor(red: 63.0/255.0, green: 195.0/255.0, blue: 128.0/255.0, alpha: 0.98)
-       //         articleCell.titleLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
-       //         articleCell.authorLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Awl →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 65.0/255.0, green: 131.0/255.0, blue: 215.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 63.0/255.0, green: 195.0/183.0, blue: 128.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 65.0/255.0, green: 131.0/255.0, blue: 215.0/255.0, alpha: 0.98)
+    
+            
                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("harpers") != nil {
                 articleCell.idLabel.text = "Harper's"
-       //            articleCell.authorLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
-       //           articleCell.authorLabel.textColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
-                    articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
-                     articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+                    articleCell.fpdescriptionlabel.text = "Read this story and more on Harper's →"
+
                 
-            }
-            
+
+                                }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("theamericanreader") != nil {
                 articleCell.idLabel.text = "The American Reader"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The American Reader →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("theparisreview") != nil {
                 articleCell.idLabel.text = "The Paris Review"
-       //         articleCell.authorLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
+      
                 articleCell.idLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
                 articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
-       //         articleCell.titleLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
-       //         articleCell.authorLabel.backgroundColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Paris Review →"
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 104.0/255.0, green: 204.0/255.0, blue: 153.0/255.0, alpha: 0.98)
+
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("newyorker") != nil {
                 articleCell.idLabel.text = "The New Yorker"
-         //       articleCell.authorLabel.backgroundColor = UIColor(red: 236.0/255.0, green: 236.0/255.0, blue: 236.0/255.0, alpha: 0.98)
-                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
-          //      articleCell.authorLabel.textColor = UIColor(red: 236.0/255.0, green: 236.0/255.0, blue: 236.0/255.0, alpha: 0.98)
-         //            articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-         //          articleCell.headerImageView.image = UIImage (named: "NewYorker")
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The New Yorker →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
                 
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("rustytoque") != nil {
                 articleCell.idLabel.text = "The Rusty Toque"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Rusty Toque →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 219.0/255.0, green: 10.0/255.0, blue: 91.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 219.0/255.0, green: 10.0/255.0, blue: 91.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("poetryisdead") != nil {
                 articleCell.idLabel.text = "Poetry is Dead"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Poetry is Dead →"
+                articleCell.idLabel.textColor = UIColor(red: 103.0/255.0, green: 65.0/255.0, blue: 114.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 103.0/255.0, green: 65.0/255.0, blue: 114.0/255.0, alpha: 0.98)
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("tor.com") != nil {
                 articleCell.idLabel.text = "Tor Magazine"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Tor →"
+
                 articleCell.idLabel.backgroundColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
                 articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("escapepod") != nil {
                 articleCell.idLabel.text = "Escape Pod"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Escape Pod →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("lightspeed") != nil {
                 articleCell.idLabel.text = "Lightspeed Magazine"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Lightspeed Magazine →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("guts") != nil {
                 articleCell.idLabel.text = "GUTS Magazine"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on GUTS Magazine →"
+                
+                articleCell.idLabel.backgroundColor = UIColor(red: 63.0/255.0, green: 195.0/255.0, blue: 128.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 63.0/255.0, green: 195.0/255.0, blue: 128.0/255.0, alpha: 0.98)
+
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("believermag") != nil {
                 articleCell.idLabel.text = "Believer Mag"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Believer Magazine →"
+
                      articleCell.idLabel.backgroundColor = UIColor(red: 150.0/255.0, green: 140.0/255.0, blue: 27.0/255.0, alpha: 0.98)
                     articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                    articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("apex-mag") != nil {
                 articleCell.idLabel.text = "Apex Magazine"
-         //      articleCell.authorLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
-          //      articleCell.authorLabel.textColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
-          //      articleCell.authorLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
-          //      articleCell.titleLabel.backgroundColor = UIColor(red: 108.0/255.0, green: 122.0/255.0, blue: 137.0/255.0, alpha: 0.98)
-                
-    
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Apex Magazine →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("shortfictionbreak") != nil {
               articleCell.idLabel.text = "Short Fiction Break"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Short Fiction Break →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+
+                
+
          //     articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
          //     articleCell.authorLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
          //     articleCell.titleLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
@@ -311,197 +453,381 @@ class FeedsViewController: UITableViewController {
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("autumnSky") != nil {
                 articleCell.idLabel.text = "Autumn Sky Poetry Daily"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Autumn Sky Daily Poetry →"
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("nereview") != nil {
                 articleCell.idLabel.text = "Northeast Review"
-                articleCell.idLabel.textColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
                  articleCell.idLabel.backgroundColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
-        //        articleCell.authorLabel.textColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
-        //        articleCell.titleLabel.backgroundColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
-        //        articleCell.authorLabel.backgroundColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
+                 articleCell.fpdescriptionlabel.textColor = UIColor(red: 103.0/255.0, green: 128.0/255.0, blue: 159.0/255.0, alpha: 0.98)
+                
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Northeast Review →"
+
                 
                 
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("writersalmanac") != nil {
                 articleCell.idLabel.text = "Writer's Almanac"
-        //        articleCell.authorLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
-        //        articleCell.authorLabel.textColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
-        //         articleCell.titleLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
-        //         articleCell.authorLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Writer's Almanac →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+       
             }
             
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("shenandoah") != nil {
                 articleCell.idLabel.text = "Shenandoah"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Shenandoah →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("triquarterly") != nil {
                 articleCell.idLabel.text = "triquarterly"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Triquarterly →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("thesunmag") != nil {
                 articleCell.idLabel.text = "The Sun Magazine"
+                articleCell.idLabel.textColor = UIColor(red: 27.0/255.0, green: 163.0/255.0, blue: 255.0/153.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.descriptionLabel.textColor = UIColor(red: 255.0/255.0, green: 227.0/255.0, blue: 167.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Sun Magazine →"
+
+            
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("blackmountain") != nil {
                 articleCell.idLabel.text = "witnessmagazine"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Witness Magazine →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("thebarking") != nil {
                 articleCell.idLabel.text = "The Barking Magazine"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Barking Magazine →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("idahoreview") != nil {
                 articleCell.idLabel.text = "The Idaho Review"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Idaho Review →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 211.0/255.0, green: 84.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 211.0/255.0, green: 84.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("americanscholar") != nil {
                 articleCell.idLabel.text = "The American Scholar"
-          //      articleCell.authorLabel.backgroundColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
-                articleCell.idLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-          //      articleCell.authorLabel.textColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.text = "Read this story and more on the American Scholar →"
+
+        
+                articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                
+
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("chelseastation") != nil {
                 articleCell.idLabel.text = "Chelsea Station"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Chelsea Station →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("pen.org") != nil {
                 articleCell.idLabel.text = "PEN"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on PEN →"
+                articleCell.idLabel.textColor = UIColor(red: 210.0/255.0, green: 215.0/255.0, blue: 211.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 210.0/255.0, green: 215.0/255.0, blue: 211.0/255.0, alpha: 0.98)
+
+                
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("kenyonreview") != nil {
                 articleCell.idLabel.text = "The Kenyon Review"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Kenyon Review →"
+
                 articleCell.idLabel.backgroundColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
                 articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
+
                 
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("narrativemag") != nil {
                 articleCell.idLabel.text = "Narrative Magazine"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Narrative Magazine →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("kirkus") != nil {
                 articleCell.idLabel.text = "Kirkus Reviews"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Kirkus Reviews →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 36.0/255.0, green: 116.0/255.0, blue: 169.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 36.0/255.0, green: 116.0/255.0, blue: 169.0/255.0, alpha: 0.98)
+            
             }
-            
-            
             //News
+            
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("queenmobs") != nil {
+                articleCell.idLabel.text = "Queen Mob's Teahouse"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Queen Mob's →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 36.0/255.0, green: 116.0/255.0, blue: 169.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 36.0/255.0, green: 116.0/255.0, blue: 169.0/255.0, alpha: 0.98)
+                
+            }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("galleycat") != nil {
                 articleCell.idLabel.text = "Galleycat"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Galleycat →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 46.0/255.0, green: 216.0/255.0, blue: 114.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+              articleCell.idLabel.backgroundColor = UIColor(red: 46.0/255.0, green: 216.0/255.0, blue: 114.0/255.0, alpha: 0.98)
+
             }
             
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("lrb.co.uk") != nil {
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
                 articleCell.idLabel.text = "The London Review of Books"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on the London Review of Books →"
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("npr.org") != nil {
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
                 articleCell.idLabel.text = "NPR"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on NPR →"
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("omnivoracious") != nil {
                 articleCell.idLabel.text = "Omnivoracious"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Omnivoracious →"
+
 
                 articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
                 articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
-                 articleCell.authorLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+              
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("themillions") != nil {
                 articleCell.idLabel.text = "The Millions"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Millions →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 235.0/255.0, green: 149.0/255.0, blue: 50.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 235.0/255.0, green: 149.0/255.0, blue: 50.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("latimes") != nil {
                 articleCell.idLabel.text = "The Los Angeles Times Books"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on the LA Times Books →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("lithub") != nil {
                 articleCell.idLabel.text = "Lithub"
                  articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
                 articleCell.idLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 239.0/255.0, blue: 216.0/255.0, alpha: 0.98)
-        //        articleCell.titleLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 239.0/255.0, blue: 216.0/255.0, alpha: 0.98)
-        //        articleCell.authorLabel.backgroundColor = UIColor(red: 255.0/255.0, green: 239.0/255.0, blue: 216.0/255.0, alpha: 0.98)
-               // articleCell.headerImageView.image = UIImage (named: "" )
+                 articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 239.0/255.0, blue: 216.0/255.0, alpha: 0.98)
+                
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Lithub →"
+                
+                
+               articleCell.descriptionLabel.text = article.summary
+              
                 
                 
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("bookriot") != nil {
                 articleCell.idLabel.text = "Book Riot"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Book Riot →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 247.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 247.0/255.0, green: 202.0/255.0, blue: 24.0/255.0, alpha: 0.98)
+                
+
             }
             
-            if articleCell.idLabel.text!.lowercaseString.rangeOfString("nymag") != nil {
-                articleCell.idLabel.text = "New York Magazine"
-            }
-            
+
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("nybooks") != nil {
                 articleCell.idLabel.text = "NY Books"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on the New York Review of Books →"
+                articleCell.idLabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("globeandmail") != nil {
                 articleCell.idLabel.text = "Globe and Mail Books"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Globe and Mail Books →"
+
                 articleCell.idLabel.backgroundColor = UIColor(red: 242.0/255.0, green: 38.0/255.0, blue: 19.0/255.0, alpha: 0.98)
                 articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
-       //          articleCell.authorLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
-        //        articleCell.authorLabel.textColor = UIColor(red: 238.0/255.0, green: 238.0/255.0, blue: 238.0/255.0, alpha: 0.98)
+                  articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                
+  
             }
                         
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("worldliteraturetoday") != nil {
                 articleCell.idLabel.text = "World Literature Today"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on World Literature Today →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("theguardian") != nil {
                 
                 articleCell.idLabel.text = "The Guardian Books"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Guardian →"
           //      articleCell.authorLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 185.0/255.0, alpha: 0.98)
                 articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 185.0/255.0, alpha: 0.98)
                 articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 185.0/255.0, alpha: 0.98)
                 
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("flavorwire") != nil {
                 articleCell.idLabel.text = "Flavorwire"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Flavorwire →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 58.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("nytimes") != nil {
                 articleCell.idLabel.text = "New York Times"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The New York Times →"
                   articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
                  articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("tag:,2016") != nil {
                 articleCell.idLabel.text = "Words Without Borders"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Words Without Borders →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 34.0/255.0, green: 167.0/255.0, blue: 240.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 34.0/255.0, green: 167.0/255.0, blue: 240.0/255.0, alpha: 0.98)
+
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("medium.com") != nil {
                 articleCell.idLabel.text = "Made Up Words"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Made Up Words →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+                
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("typepad") != nil {
                 articleCell.idLabel.text = "Times Literary Supplement"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on The Times Literary Supplement →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 155.0/255.0, green: 89.0/255.0, blue: 182.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 155.0/255.0, green: 89.0/255.0, blue: 182.0/255.0, alpha: 0.98)
+            
+            
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("wordhaus") != nil {
                 articleCell.idLabel.text = "Wordhaus"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on Wordhaus →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("vqronline") != nil {
                 articleCell.idLabel.text = "The Virginia Quarterly Review"
+                articleCell.fpdescriptionlabel.text = "Read this story and more on the Virginia Quarterly Review →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 0.98)
             }
             
             if articleCell.idLabel.text!.lowercaseString.rangeOfString("rattle") != nil {
                 articleCell.idLabel.text = "Rattle"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Rattle →"
+                articleCell.idLabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+                articleCell.idLabel.backgroundColor = UIColor(red: 31.0/255.0, green: 58.0/255.0, blue: 157.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+       //         articleCell.titleLabel.shadowColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
             }
             
-            if articleCell.idLabel.text!.lowercaseString.rangeOfString("ducts.org") != nil {
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("fiction") != nil {
                 articleCell.idLabel.text = "Ducts.org"
+                 articleCell.fpdescriptionlabel.text = "Read this story and more on Ducts.org →"
+                articleCell.idLabel.backgroundColor = UIColor(red: 235.0/255.0, green: 149.0/255.0, blue: 50.0/255.0, alpha: 0.98)
+                articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.98)
+                articleCell.fpdescriptionlabel.textColor = UIColor(red: 235.0/255.0, green: 149.0/255.0, blue: 50.0/255.0, alpha: 0.98)
+       //         articleCell.titleLabel.shadowColor = UIColor(red: 235.0/255.0, green: 149.0/255.0, blue: 50.0/255.0, alpha: 0.98)
             }
-        
+            
+            
+            
+            if articleCell.idLabel.text!.lowercaseString.rangeOfString("orphans") != nil {
+            articleCell.idLabel.text = "Literary Orphans"
+            articleCell.fpdescriptionlabel.text = "Read this story and more on Literary Orphans →"
+            articleCell.idLabel.backgroundColor = UIColor(red: 191.0/255.0, green: 191.0/255.0, blue: 191.0/255.0, alpha: 0.98)
+            articleCell.idLabel.textColor = UIColor(red: 0.0/255.0, green: 0.0/183.0, blue: 0.0/255.0, alpha: 0.98)
+            articleCell.fpdescriptionlabel.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.98)
+            }
+            
+       
+            
+           if articleCell.idLabel.text == ""  {
+            articleCell.idLabel.hidden = true
+            articleCell.fpdescriptionlabel.textColor = UIColor(red: 235.0/255.0, green: 149.0/255.0, blue: 50.0/255.0, alpha: 0)
+
+           }
             
      //       articleCell.categoryLabel.text = article.categories.first?.uppercaseString
             
@@ -566,8 +892,8 @@ class FeedsViewController: UITableViewController {
                         
                     } else if self.storyboard!.valueForKey("name")! as! String == "Main_iPad" {
                         if articleCell.imageViewConstraintHeight != nil {
-                            articleCell.imageViewConstraintHeight.constant = 420.0
-                            self.tableView.estimatedRowHeight = 582.0
+                            articleCell.imageViewConstraintHeight.constant = 400.0
+                            self.tableView.estimatedRowHeight = 500.0
                         }
                     }
 
@@ -579,7 +905,7 @@ class FeedsViewController: UITableViewController {
                                 // Sometimes, the default image is too small to display.
                                 // In this case, we will hide the thumbnail
                                 
-                                if image == nil || image.size.width < 120
+                                if image == nil || image.size.width < 100
                                   {
                                     
                                     do {
@@ -832,6 +1158,7 @@ class FeedsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        
         // Get the first feed in the list
         currentFeeds = (title: feedsURLs[0]["name"]!, url: feedsURLs[0]["url"]!)
         
@@ -839,7 +1166,7 @@ class FeedsViewController: UITableViewController {
         // Configure title label/dropdown menu depending on your settings
         if ConfigurationManager.isDropdownMenuEnabled() {
             navigationItem.titleView = navigationHeaderButton;
-            navigationHeaderButton.titleLabel?.font = UIFont(name: ConfigurationManager.defaultBarFont(), size: 25.0)
+            navigationHeaderButton.titleLabel?.font = UIFont(name: ConfigurationManager.defaultBarFont(), size: 26.0)
             switch ConfigurationManager.defaultTheme() {
                 case "dark":
                     navigationHeaderButton.tintColor = UIColor.whiteColor()
@@ -853,6 +1180,8 @@ class FeedsViewController: UITableViewController {
             navigationHeaderLabel?.text = feedsURLs[0]["name"]!
             navigationHeaderLabel?.textAlignment = .Center
             navigationHeaderLabel?.font = UIFont(name: ConfigurationManager.defaultBarFont(), size: 17.0)
+            
+
             switch ConfigurationManager.defaultTheme() {
                 case "dark":
                     navigationHeaderLabel?.textColor = UIColor.whiteColor()

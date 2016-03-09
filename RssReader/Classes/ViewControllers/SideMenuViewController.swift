@@ -63,7 +63,7 @@ class SideMenuViewController: UITableViewController, SectionHeaderViewDelegate {
        tableView.separatorColor = UIColor.blackColor()
 
         if menuTitleLabel != nil {
-            menuTitleLabel.font = UIFont(name: ConfigurationManager.defaultBarFont(), size: 13.5)
+            menuTitleLabel.font = UIFont(name: ConfigurationManager.defaultBarFont(), size: 12.5)
         }
         
         currentFeed = self.detailViewController.currentFeeds
@@ -228,6 +228,14 @@ class SideMenuViewController: UITableViewController, SectionHeaderViewDelegate {
     
 
     
+    @IBAction func learnmore(sender: AnyObject) {
+        func WebLink(sender: AnyObject) {
+            if let url = NSURL(string: "http://google.com") {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
+    }
+
     
     }
 

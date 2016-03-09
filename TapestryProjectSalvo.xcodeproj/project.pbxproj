@@ -12,6 +12,7 @@
 		EB108C9D1C7E80A500A9F898 /* PetitLatin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB108C9C1C7E80A500A9F898 /* PetitLatin.ttf */; };
 		EB108C9F1C7E815F00A9F898 /* Lecker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB108C9E1C7E815F00A9F898 /* Lecker.ttf */; };
 		EB996A451C824AC1004F294B /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB996A441C824AC1004F294B /* ShareButton.swift */; };
+		EBA09E071C8AA38600C3A708 /* Juste.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBA09E061C8AA38600C3A708 /* Juste.ttf */; };
 		EBA28FCB1C75711C00722BF0 /* AUGUSTUS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EBA28FCA1C75711C00722BF0 /* AUGUSTUS.TTF */; };
 		EBA28FCD1C7578C500722BF0 /* cicle in Resources */ = {isa = PBXBuildFile; fileRef = EBA28FCC1C7578C500722BF0 /* cicle */; };
 		EBE17E941C66F826002B22D9 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE17E931C66F826002B22D9 /* DiscoverView.swift */; };
@@ -91,6 +92,7 @@
 		EB108C9C1C7E80A500A9F898 /* PetitLatin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PetitLatin.ttf; path = ../../Fonts/cicle/PetitLatin.ttf; sourceTree = "<group>"; };
 		EB108C9E1C7E815F00A9F898 /* Lecker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lecker.ttf; path = ../../Fonts/Lecker.ttf; sourceTree = "<group>"; };
 		EB996A441C824AC1004F294B /* ShareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareButton.swift; path = ../../../ShareButton.swift; sourceTree = "<group>"; };
+		EBA09E061C8AA38600C3A708 /* Juste.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Juste.ttf; sourceTree = "<group>"; };
 		EBA28FCA1C75711C00722BF0 /* AUGUSTUS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AUGUSTUS.TTF; sourceTree = "<group>"; };
 		EBA28FCC1C7578C500722BF0 /* cicle */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cicle; path = ../../Fonts/cicle; sourceTree = "<group>"; };
 		EBE17E931C66F826002B22D9 /* DiscoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverView.swift; path = "../../../../../Coding/TapestryApp/TapestryFirstDraft/Third Iteration/RssReader/Classes/ViewControllers/DiscoverView.swift"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				EBA28FCC1C7578C500722BF0 /* cicle */,
 				EBA28FCA1C75711C00722BF0 /* AUGUSTUS.TTF */,
 				EB108C9C1C7E80A500A9F898 /* PetitLatin.ttf */,
+				EBA09E061C8AA38600C3A708 /* Juste.ttf */,
 				EB108C9E1C7E815F00A9F898 /* Lecker.ttf */,
 				0CAFF1CB942C30AED2A90F3E /* Pods */,
 			);
@@ -591,6 +594,7 @@
 				F25377241A1E149D008B1171 /* Main_iPhone.storyboard in Resources */,
 				F4829C381BE312A6007570D0 /* SidebarSectionHeaderView.xib in Resources */,
 				F25377291A1E149D008B1171 /* LaunchScreen.xib in Resources */,
+				EBA09E071C8AA38600C3A708 /* Juste.ttf in Resources */,
 				F4839C791A39956600B1F439 /* Lato-Light.ttf in Resources */,
 				F4B820771A301F2900A1E002 /* OFL.txt in Resources */,
 				EB108C9F1C7E815F00A9F898 /* Lecker.ttf in Resources */,
@@ -904,7 +908,6 @@
 		F253773C1A1E149D008B1171 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -924,7 +927,6 @@
 		F253773D1A1E149D008B1171 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

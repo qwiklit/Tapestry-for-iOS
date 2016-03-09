@@ -367,6 +367,7 @@
 		E46528CFFA1E2F9D84D537FD /* Pods-RssReader-MWFeedParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RssReader-MWFeedParser-prefix.pch"; sourceTree = "<group>"; };
 		E5B36F88750CC1391A1C81CC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		E6CF3D6AAB6AEFB53D15241A /* Pods-RssReader-SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RssReader-SDWebImage-dummy.m"; sourceTree = "<group>"; };
+		EBA09E081C8B999300C3A708 /* Pods-RssReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pods-RssReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		F35B9E93AEB17565ED2AA243 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		F37BA77E0E43772D2F376560 /* UIImageView+UIActivityIndicatorForSDWebImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIActivityIndicatorForSDWebImage.h"; sourceTree = "<group>"; };
 		F50ECD79F598842038062ED6 /* libPods-RssReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -901,6 +902,7 @@
 				92C42CBF0792CF5728E68D64 /* Pods */,
 				9671F39EB407373CDBBE64B8 /* Products */,
 				05BB6E0AD7E2ACE681ECD3B8 /* Targets Support Files */,
+				EBA09E081C8B999300C3A708 /* Pods-RssReader-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1212,6 +1214,7 @@
 		C3B4A67ABD0887E354ACAB7B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = 6BC4E40D37322E5A4E959601 /* Build configuration list for PBXProject "Pods" */;
@@ -1414,8 +1417,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D5F7D878438FDA0471090AB4 /* Pods-RssReader.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1423,6 +1428,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods-RssReader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1677,8 +1684,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C88A11C2E2858106BA2ED89 /* Pods-RssReader.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1686,6 +1695,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods-RssReader-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -17,14 +17,25 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LOGOicon" translatesAutoresizingMaskIntoConstraints="NO" id="Ueq-hN-3nl">
+                <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LOGOicon" translatesAutoresizingMaskIntoConstraints="NO" id="Ueq-hN-3nl">
                     <rect key="frame" x="120" y="208" width="240" height="63"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atQ-6r-Rer">
+                    <rect key="frame" x="-291" y="287" width="1071" height="178"/>
+                    <string key="text">Discover hundreds of stories from hundreds of authors. Connect and submit your short stories and poetry directly through our discover tab. </string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="atQ-6r-Rer" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0W3-8b-537"/>
                 <constraint firstItem="Jc5-PY-1Hk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5Ys-ZS-19g"/>
+                <constraint firstAttribute="bottom" secondItem="atQ-6r-Rer" secondAttribute="bottom" constant="60" id="EmV-ex-eZU"/>
                 <constraint firstItem="Ueq-hN-3nl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K9w-bp-lsy"/>
+                <constraint firstItem="atQ-6r-Rer" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="37" id="KtB-32-j2X"/>
+                <constraint firstAttribute="trailing" secondItem="atQ-6r-Rer" secondAttribute="trailing" constant="37" id="W1o-SS-9Vs"/>
                 <constraint firstItem="Jc5-PY-1Hk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qfB-yN-1xp"/>
                 <constraint firstItem="Ueq-hN-3nl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zsO-bR-LCr"/>
             </constraints>

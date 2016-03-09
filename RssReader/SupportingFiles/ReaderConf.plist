@@ -22,11 +22,11 @@
 			<key>name</key>
 			<string>Tapestry Home</string>
 			<key>url</key>
-			<string>http://mix.chimpfeedr.com/71519-TapestryMainFeed-24February</string>
+			<string>http://mix.chimpfeedr.com/1df10-TapestryMainFeed-March62016</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Short Stories and Poetry</string>
+			<string>Short Stories &amp; Poetry</string>
 			<key>url</key>
 			<string>CategoryFeed</string>
 		</dict>
@@ -57,13 +57,13 @@
 	</array>
 	<key>CategoryFeeds</key>
 	<dict>
-		<key>Short Stories and Poetry</key>
+		<key>Short Stories &amp; Poetry</key>
 		<array>
 			<dict>
 				<key>name</key>
 				<string>All Short Fiction</string>
 				<key>url</key>
-				<string>http://mix.chimpfeedr.com/24306-TapestryDecember21</string>
+				<string>http://mix.chimpfeedr.com/575e1-TapestryShortFictionMix</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -149,6 +149,12 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>Chicago Literati</string>
+				<key>url</key>
+				<string>http://chicagoliterati.com/feed/</string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>CrazyHorse</string>
 				<key>url</key>
 				<string>http://crazyhorse.cofc.edu/feed/</string>
@@ -160,13 +166,6 @@
 				<string>http://www.deadmule.com/feed</string>
 				<key>submit</key>
 				<string>https://deadmule.submittable.com/submit/2343</string>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>Ducts.org</string>
-				<key>url</key>
-				<string>http://www.ducts.org/content/feed/
-</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -210,12 +209,6 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>Fiction Southeast</string>
-				<key>url</key>
-				<string>http://fictionsoutheast.org/feed/</string>
-			</dict>
-			<dict>
-				<key>name</key>
 				<string>Geist</string>
 				<key>url</key>
 				<string>http://www.geist.com/fiction/index.rss</string>
@@ -252,9 +245,21 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>The Indiana Review</string>
+				<key>url</key>
+				<string>https://indianareview.org/feed/</string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>The Journal of Bison Jack</string>
 				<key>url</key>
 				<string>http://thejournalofbisonjack.tumblr.com/rss</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Literary Orphans</string>
+				<key>url</key>
+				<string>http://www.literaryorphans.org/playdb/feed/</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -337,13 +342,6 @@
 				<string>http://www.poetryisdead.ca/rss.xml</string>
 				<key>submit</key>
 				<string>https://poetryisdeadmagazine.submittable.com/submit</string>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>The Portland Review</string>
-				<key>url</key>
-				<string>http://portlandreview.org/feed/
-</string>
 			</dict>
 			<dict>
 				<key>name</key>

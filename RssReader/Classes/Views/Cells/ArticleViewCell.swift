@@ -24,15 +24,9 @@ class ArticleViewCell: UITableViewCell {
     @IBOutlet weak var imageViewConstraintWidth: NSLayoutConstraint!
     @IBOutlet var idLabel: UILabel!
     
+    @IBOutlet weak var fpdescriptionlabel: UILabel!
     @IBOutlet weak var sharebutton: UIButton!
     @IBOutlet weak var urlbutton: UIButton!
-    @IBAction func WebLink(sender: AnyObject) {
-        if let url = NSURL(string: "http://tapestryreader.com") {
-            UIApplication.sharedApplication().openURL(url)
-        }
-    }
-    
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -47,17 +41,16 @@ class ArticleViewCell: UITableViewCell {
     
     func configure() -> Void {
         if ConfigurationManager.defaultCellFont() != "default" {
-            titleLabel.font = UIFont(name: "Coustard", size: 49.0)
-            authorLabel.font  = UIFont(name: "Raleway", size: 23.0)
-             descriptionLabel?.font  = UIFont(name: "Varela", size: 16.5)
-  //          categoryLabel.font  = UIFont(name: ConfigurationManager.defaultCellFont(), size: 10.0)
- //          dateTimeLabel.font  = UIFont(name: ConfigurationManager.defaultCellFont(), size: 12.0)
-           
-           idLabel?.font  = UIFont(name: "Raleway", size: 30.0)
+            titleLabel.font = UIFont(name: "Coustard", size: 43.5)
+            authorLabel.font  = UIFont(name: "Raleway", size: 22.3)
+             descriptionLabel?.font  = UIFont(name: "Lato-Light", size: 17.5)
+  //          categoryLabel.font  = UIFont(name: ConfigurationManager.defaultCellFont(), size: 15.0)
+           fpdescriptionlabel.font  = UIFont(name: "Lato-Regular", size: 21.0)
+           idLabel?.font  = UIFont(name: "Lato-Regular", size: 23.0)
         } else {
             titleLabel.font = UIFont(name: "Raleway", size: 35.0)
             authorLabel.font  = UIFont(name: "AUGUSTUS", size: 13.0)
-  //           categoryLabel.font  = UIFont(name: "Raleway", size: 12.0)
+             categoryLabel.font  = UIFont(name: "Raleway", size: 12.0)
  //           dateTimeLabel.font  = UIFont(name: "Raleway", size: 0)
             descriptionLabel?.font  = UIFont(name: "Raleway", size: 14.0)
         }

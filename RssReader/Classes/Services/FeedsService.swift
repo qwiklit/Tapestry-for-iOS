@@ -423,7 +423,7 @@
             case rssGuidTag:
                 currentFeed?.guid! += currentString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             case rssIdTag:
-                currentFeed?.content! += currentString
+                currentFeed?.summary! += currentString
             default:
                 break;
                 
@@ -458,8 +458,8 @@
                 currentFeed?.rawDescription! += currentString
             case atomWebsiteTag:
                 currentFeed?.id! += currentString
- //           case atomDescriptionTag:
-//                currentFeed?.summary! += currentString
+            case atomDescriptionTag:
+                currentFeed?.summary! += currentString
             default:
                 break;
             }
